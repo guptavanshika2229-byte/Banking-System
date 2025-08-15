@@ -1,9 +1,11 @@
-class BankAccount:
-    def __init__(self, account_holder, balance=0):
+#Banking System
+class BankAccount:  #class
+    def __init__(self, account_holder, balance=0): #constructor
         self.account_holder = account_holder
         self.balance = balance
 
     def deposit(self, amount):
+        #conditional statements for balance
         if amount > 0:
             self.balance += amount
             print(f"₹{amount} deposited successfully.")
@@ -22,7 +24,7 @@ class BankAccount:
         print(f"Current Balance: ₹{self.balance}")
 
 
-Example usage
+#Example usage
 def main():
     print("Welcome to Simple Bank!")
     name = input("Enter account holder name: ")
