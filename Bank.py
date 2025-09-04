@@ -1,11 +1,12 @@
-#Banking System
-class BankAccount:  #class
-    def __init__(self, account_holder, balance=0): #constructor
+# Banking System
+
+class BankAccount:  # class
+    def __init__(self, account_holder, balance=0):  # constructor
         self.account_holder = account_holder
         self.balance = balance
 
     def deposit(self, amount):
-        #conditional statements for balance
+        # conditional statements for deposit
         if amount > 0:
             self.balance += amount
             print(f"₹{amount} deposited successfully.")
@@ -13,6 +14,7 @@ class BankAccount:  #class
             print("Deposit amount must be positive.")
 
     def withdraw(self, amount):
+        # conditional statements for withdrawal
         if amount <= self.balance:
             self.balance -= amount
             print(f"₹{amount} withdrawn successfully.")
@@ -20,11 +22,12 @@ class BankAccount:  #class
             print("Insufficient balance.")
 
     def check_balance(self):
+        # display account details
         print(f"Account Holder: {self.account_holder}")
         print(f"Current Balance: ₹{self.balance}")
 
 
-#Example usage
+# Example usage
 def main():
     print("Welcome to Simple Bank!")
     name = input("Enter account holder name: ")
@@ -54,5 +57,5 @@ def main():
             print("Invalid option. Please try again.")
 
 
-if name == "__main__":
+if __name__ == "__main__":
     main()
